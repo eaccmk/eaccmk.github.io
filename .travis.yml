@@ -1,5 +1,5 @@
 language: node_js
 node_js:
-  - "Node"
-
+  - "iojs"
+  - "7"
   script: echo "npm test temporarily disabled"
