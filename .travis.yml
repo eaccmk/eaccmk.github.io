@@ -2,4 +2,7 @@ language: node_js
 node_js:
   - "iojs"
   - "7"
-script: echo "npm test temporarily disabled"
+ scripts:
+  - npm install codecov -g
+after_success:
+  - codecov
