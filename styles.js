@@ -1,13 +1,21 @@
-webpackJsonp(["styles"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/styles.css ***!
+  \**********************************************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\r\nbody {background-color: lightsteelblue;}"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n/* Example of  */\r\nbody {background-color: #15E5AF}\r\nh1 {color: white; background-color: grey; text-align:center}\r\nh2 {color:whitesmoke  ;background-color: lightgreen}\r\nh3 {color: grey ;background-color:lightsteelblue}\r\nh4 {color: white}\r\nh5 {color: white; background-color: grey}\r\np {color: white; font-size: 130%}\r\ndiv {text-align:center}\r\n#idStyle {color: black}\r\n/* Example of  ID tag */\r\n.urls {color: white}\r\n/* Example of Class tag */\r\n#searchInput {align-items: center}\r\n/* Search CSS */\r\n#search-text-input{\r\n    border-top:thin solid  #e5e5e5;\r\n    border-right:thin solid #e5e5e5;\r\n    border-bottom:0;\r\n    border-left:thin solid  #e5e5e5;\r\n    box-shadow:0px 1px 1px 1px #e5e5e5;\r\n    /* float:left; */\r\n    height:17px;\r\n    margin:.8em 0 0 .5em; \r\n    outline:0;\r\n    padding:.4em 0 .4em .6em; \r\n    width:183px; \r\n}\r\n/* Reference for Navigation header: https://www.w3schools.com/howto/howto_css_searchbar.asp  */\r\n/* Add a black background color to the top navigation bar */\r\n.topnav {\r\n    overflow: hidden;\r\n    background-color: #e9e9e9;\r\n}\r\n/* Style the links inside the navigation bar */\r\n.topnav a {\r\n    float: left;\r\n    display: block;\r\n    color: black;\r\n    text-align: center;\r\n    padding: 14px 16px;\r\n    text-decoration: none;\r\n    font-size: 17px;\r\n}\r\n/* Change the color of links on hover */\r\n.topnav a:hover {\r\n    background-color: #ddd;\r\n    color: black;\r\n}\r\n/* Style the \"active\" element to highlight the current page */\r\n.topnav a.active {\r\n    background-color: #2196F3;\r\n    color: white;\r\n}\r\n/* Style the search box inside the navigation bar */\r\n.topnav input[type=text] {\r\n    float: right;\r\n    padding: 6px;\r\n    border: none;\r\n    margin-top: 8px;\r\n    margin-right: 16px;\r\n    font-size: 17px;\r\n}\r\n/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */\r\n@media screen and (max-width: 600px) {\r\n    .topnav a, .topnav input[type=text] {\r\n        float: none;\r\n        display: block;\r\n        text-align: left;\r\n        width: 100%;\r\n        margin: 0;\r\n        padding: 14px;\r\n    }\r\n    .topnav input[type=text] {\r\n        border: 1px solid #ccc;\r\n    }\r\n}"
 
 /***/ }),
 
 /***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -35,14 +43,26 @@ var isOldIE = memoize(function () {
 	return window && document && document.all && !window.atob;
 });
 
+var getTarget = function (target) {
+  return document.querySelector(target);
+};
+
 var getElement = (function (fn) {
 	var memo = {};
 
-	return function(selector) {
-		if (typeof memo[selector] === "undefined") {
-			var styleTarget = fn.call(this, selector);
+	return function(target) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target);
 			// Special case to return head of iframe instead of iframe itself
-			if (styleTarget instanceof window.HTMLIFrameElement) {
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
 				try {
 					// This will throw an exception if access to iframe is blocked
 					// due to cross-origin restrictions
@@ -51,19 +71,17 @@ var getElement = (function (fn) {
 					styleTarget = null;
 				}
 			}
-			memo[selector] = styleTarget;
+			memo[target] = styleTarget;
 		}
-		return memo[selector]
+		return memo[target]
 	};
-})(function (target) {
-	return document.querySelector(target)
-});
+})();
 
 var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__("./node_modules/style-loader/lib/urls.js");
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -79,7 +97,7 @@ module.exports = function(list, options) {
 	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
 
 	// By default, add <style> tags to the <head> element
-	if (!options.insertInto) options.insertInto = "head";
+        if (!options.insertInto) options.insertInto = "head";
 
 	// By default, add <style> tags to the bottom of the target
 	if (!options.insertAt) options.insertAt = "bottom";
@@ -203,7 +221,9 @@ function removeStyleElement (style) {
 function createStyleElement (options) {
 	var style = document.createElement("style");
 
-	options.attrs.type = "text/css";
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
 
 	addAttrs(style, options.attrs);
 	insertStyleElement(options, style);
@@ -214,7 +234,9 @@ function createStyleElement (options) {
 function createLinkElement (options) {
 	var link = document.createElement("link");
 
-	options.attrs.type = "text/css";
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
 	options.attrs.rel = "stylesheet";
 
 	addAttrs(link, options.attrs);
@@ -381,6 +403,10 @@ function updateLink (link, options, obj) {
 /***/ }),
 
 /***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 
@@ -447,7 +473,7 @@ module.exports = function (css) {
 			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
 
 		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
 		  return fullMatch;
 		}
 
@@ -477,44 +503,46 @@ module.exports = function (css) {
 /***/ }),
 
 /***/ "./src/styles.css":
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
 
-// load the styles
-var content = __webpack_require__("./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css");
+var content = __webpack_require__(/*! !../node_modules/raw-loader!../node_modules/postcss-loader/lib??embedded!./styles.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css");
+
 if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
+
 var transform;
+var insertInto;
+
+
 
 var options = {"hmr":true}
+
 options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__("./node_modules/style-loader/lib/addStyles.js")(content, options);
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
 if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../node_modules/raw-loader/index.js!../node_modules/postcss-loader/lib/index.js??embedded!./styles.css", function() {
-			var newContent = require("!!../node_modules/raw-loader/index.js!../node_modules/postcss-loader/lib/index.js??embedded!./styles.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
+
+if(false) {}
 
 /***/ }),
 
 /***/ 2:
+/*!******************************!*\
+  !*** multi ./src/styles.css ***!
+  \******************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./src/styles.css");
+module.exports = __webpack_require__(/*! C:\workspace\github\My_io_web\1st-angular-cli-repo\src\styles.css */"./src/styles.css");
 
 
 /***/ })
 
-},[2]);
-//# sourceMappingURL=styles.bundle.js.map
+},[[2,"runtime"]]]);
+//# sourceMappingURL=styles.js.map
