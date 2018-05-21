@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}\r\n  </h1>\r\n  <a href=\"https://github.com/eaccmk\">\r\n      <img src=\"assets\\img\\eaccmk_pic.jpg\" alt=\"eaccmk@github\" style=\"width:210px;height:170px;border:0;\">\r\n    </a>\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/eaccmk\">My GitHyb Account</a></h2>\r\n  </li>\r\n<br><br><br>\r\n    <h4>\r\n      <a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Angular tutorial</a> | \r\n      <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a> | \r\n      <a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\" >Angular Blog</a>\r\n  </h4>\r\n</ul>\r\n"
+module.exports = "  <div class=\"topnav\">\r\n        <a class=\"active\" href=\"#home\">Home</a>\r\n        <a href=\"#about\">About</a>\r\n        <a href=\"#contact\">Contact</a>\r\n        <input type=\"text\" placeholder=\"web search\">\r\n  </div>\r\n  <h1>\r\n    Welcome to {{ title }}\r\n  </h1>\r\n  \r\n  <div style=\"text-align:center\">\r\n  <form action=\"_self\"> <!-- or /index.html or /eaccmk.github.io  or _self  -->\r\n    <h4 style=\"text-align:center\">Enter your github username & submit to see magic ! </h4>\r\n    <input type=\"text\" value=\"\" id=\"searchInput\" placeholder=\"Search...\" color=\"white\">\r\n    <button onclick='window.open(\"https://github.com/\"+searchInput.value)'>Submit</button> <br><br>\r\n  </form>\r\n</div>\r\n\r\n    <div style=\"text-align:center\">\r\n      <a href=\"https://github.com/eaccmk\"> <img src=\"assets\\img\\colorful_QR_eaccmk.png\" alt=\"eaccmk@github\" style=\"width:160px;height:160px;border:0;\"> </a>\r\n      <h4 style=\"text-align:center; color: black\">You can  scan <i class=\"em em-point_up_2\"></i> to access later...</h4>\r\n    </div>\r\n    <div content class=\"content\">\r\n        <li>\r\n            <h4><a target=\"_blank\" rel=\"noopener\" class=\"urls\"href=\"https://github.com/eaccmk\">Scan the code above or click to see My GitHyb Account</a></h4>\r\n        </li>\r\n    <ul>\r\n        <br><br><br><br><br><br><br><br><br>\r\n          <h5 style color=\"white\">Below are some more links to get started withy your own Angular Web </h5>\r\n            <h4>\r\n              <a target=\"_blank\" rel=\"noopener\" class=\"urls\" href=\"https://angular.io/tutorial\">Angular tutorial</a> | \r\n              <a target=\"_blank\" rel=\"noopener\" class=\"urls\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a> | \r\n              <a target=\"_blank\" rel=\"noopener\" class=\"urls\" href=\"https://blog.angular.io/\" >Angular Blog</a>\r\n            </h4>\r\n    </ul>\r\n</div>"
 
 /***/ }),
 
@@ -66,6 +66,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'eaccmk_io';
+        this.name = 'name';
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -140,7 +141,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: false
+    production: false,
+    dev: true
 };
 
 
