@@ -26,3 +26,6 @@ You can also use `ng generate directive|pipe|service|class|guard|interface|enum|
 ## Further help
 
 > To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+...handcrafted with :em-heart:
