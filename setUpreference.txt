@@ -1,0 +1,53 @@
+dell@Millan MINGW32 /d/Web/git/my_web/eaccmk.github.io (v2)
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (eaccmk.github.io)
+version: (1.0.0)
+description: eaccmk.io web project
+entry point: (main.js)
+test command: ng test
+git repository: (https://github.com/eaccmk/eaccmk.github.io.git)
+keywords: eaccmk, web, angular, ng
+author: @eaccmk (Millan)
+license: (ISC)
+About to write to D:\Web\git\my_web\eaccmk.github.io\package.json:
+
+{
+  "name": "eaccmk.github.io",
+  "version": "1.0.0",
+  "description": "eaccmk.io web project",
+  "main": "main.js",
+  "scripts": {
+    "test": "ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eaccmk/eaccmk.github.io.git"
+  },
+  "keywords": [
+    "eaccmk",
+    "web",
+    "angular",
+    "ng"
+  ],
+  "author": "eaccmk (Millan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eaccmk/eaccmk.github.io/issues"
+  },
+  "homepage": "https://github.com/eaccmk/eaccmk.github.io#readme"
+}
+
+
+Is this OK? (yes) yes
+
+dell@Millan MINGW32 /d/Web/git/my_web/eaccmk.github.io (v2)

@@ -1,0 +1,25 @@
+{
+  "name": "eaccmk.github.io",
+  "version": "1.0.0",
+  "description": "eaccmk.io web project",
+  "main": "main.js",
+  "scripts": {
+    "test": "ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eaccmk/eaccmk.github.io.git"
+  },
+  "keywords": [
+    "eaccmk",
+    "web",
+    "angular",
+    "ng"
+  ],
+  "author": "eaccmk (Millan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eaccmk/eaccmk.github.io/issues"
+  },
+  "homepage": "https://github.com/eaccmk/eaccmk.github.io#readme"
+}
