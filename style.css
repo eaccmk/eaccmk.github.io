@@ -1,4 +1,87 @@
-:root {
+html, body{
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+
+}
+
+section{
+  position: relative;
+  margin: 0 -999rem;
+  padding: 5.25rem 999rem;
+  text-align: center;
+}
+
+#welcomeSection{
+  background-color: #2980b9;
+  color: white;
+}
+
+#About{
+  background-color: #1abc9c;
+  color: white;
+}
+
+#About p, #Skills p{
+  padding: 0 120px;
+  text-align: left;
+}
+
+#Skills{
+  background-color: #d35400;
+  color: white;
+}
+
+#Work{
+  background-color: #34495e;
+  color: white;
+}
+
+#Clients{
+  background-color: #f39c12;
+  color: white;
+}
+
+#Contact{
+  background-color: #9b59b6;
+  color: white;
+}
+
+img{
+  padding: 5px 5px 5px 5px;
+}
+
+nav {
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none:
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  margin-right: 25px;
+  display: inline-block;
+  color: yellow;
+  transition: ease-out .2s;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  transform: rotate(5deg);
+}
+
+/*:root {
   --canvasColor: #f9f9f9;
 }
 
@@ -1071,4 +1154,4 @@ footer .social a .icons {
 }
 footer.dark, footer.dark a {
   color: #f9f9f9;
-}
+}*/

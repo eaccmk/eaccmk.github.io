@@ -1,15 +1,14 @@
-//the alert is collapsible yay
-$(".alert").on("click", function() {
-	$(this).hide("slow");
-});
-
-//apprearance
-$("input.variation").on("click", function() {
-	if ($(this).val() > 3) {
-		$("body").css("background", "#2a313b");
-		$("footer").attr("class", "dark");
-	} else {
-		$("body").css("background", "#f9f9f9");
-		$("footer").attr("class", "");
-	}
-});
+// When the document is loaded...
+    $(document).ready(function()
+    {
+        // Scroll the whole document
+        $('#menu').localScroll({
+           target:'body'
+        });
+ 
+        // Scroll the content inside the #scroll-container div
+        $('#menu').localScroll({
+           target:'#About'
+        });
+ 
+    });
