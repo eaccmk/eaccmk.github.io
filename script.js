@@ -5,10 +5,10 @@
         $('#menu').localScroll({
            target:'body'
         });
- 
+
         // Scroll the content inside the #scroll-container div
         $('#menu').localScroll({
            target:'#About'
         });
- 
-    });
+
+    }); 
