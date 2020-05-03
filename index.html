@@ -1,20 +1,63 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
   <meta charset="utf-8">
   <title>eaccmk</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets\img\e.png">
-  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-</head>
-<body>
-<a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/" data-label_1="Sydney" data-label_2="(Today)" data-font="Ubuntu" data-icons="Climacons Animated" data-days="3" data-theme="weather_one" >Sydney (Today)</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-  
-  <app-root></app-root>
 
+ <head> 
+  <!-- Style sheets -->
+  <LINK href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <LINK href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+  <LINK href="https://cdnjs.cloudflare.com/script.css" rel="stylesheet" type="text/css">
+  <LINK href="style.css" rel="stylesheet" type="text/css">
+<!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 
-  
+ <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
 
-<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body></html>
+ </head>
+
+<!-- <section id="Weather Display Section"> -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/"  id="Sydney Weather is Displayed here" data-label_1="Sydney" data-label_2="(Today)" data-font="Ubuntu" data-icons="Climacons Animated" data-days="3" data-theme="weather_one" >Sydney (Today)</a>
+<!-- </section> -->
+<section id="welcomeSection">
+  <nav id="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Work">Work</a></li>
+        <li><a href="#Clients">Clients</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Welcome</h1>
+  <p>to my site</p>
+</section>
+    <section id="About">
+      <h1>About</h1>
+      <p>The most common lorem ipsum text reads as follows: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    <section id="Skills">
+      <h1>Skills</h1>
+      <p>Even though using "lorem ipsum" often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning. Where text is visible in a document, people tend to focus on the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design in order to direct the focus to presentation. "Lorem ipsum" also approximates a typical distribution of spaces in English.</p>
+    </section>
+    <section id="Work">
+      <h1>Work</h1>
+      <img src="http://placehold.it/350x300">
+      <img src="https://via.placeholder.com/300.png/09f/fff">
+    </section>
+    <section id="Clients">
+      <h1>Clients</h1>
+      <img src="assets\img\boy_comingSoon.png">
+    </section>
+    <section id="Contact">
+      <h1>Contact</h1>
+      <p>todo</p>
+    </section>
