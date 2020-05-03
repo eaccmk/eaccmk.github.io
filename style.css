@@ -29,7 +29,7 @@ section{
 
 #About p, #Skills p{
   padding: 0 120px;
-  text-align: left;
+  text-align: center;
 }
 
 #Skills{
