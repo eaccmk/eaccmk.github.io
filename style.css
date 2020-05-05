@@ -9,6 +9,20 @@ html, body{
   font-weight: 100;
 
 }
+/* style.css */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 
 section{
   position: relative;
@@ -18,12 +32,12 @@ section{
 }
 
 #welcomeSection{
-  background-color: #2980b9;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 #About{
-  background-color: #1abc9c;
+  background-color: black;
   color: white;
 }
 
@@ -33,22 +47,23 @@ section{
 }
 
 #Skills{
-  background-color: #d35400;
-  color: white;
+  padding: 25px 25px 25px 25px;
+  background-color: white;
+  color: black;
 }
 
 #Work{
-  background-color: #34495e;
-  color: white;
-}
-
-#Clients{
-  background-color: #f39c12;
+  background-color: black;
   color: white;
 }
 
 #Contact{
-  background-color: #9b59b6;
+  background-color: white;
+  color: black;
+}
+
+#Cerdits{
+  background-color: black;
   color: white;
 }
 
@@ -71,12 +86,12 @@ nav ul li {
 nav ul li a {
   margin-right: 25px;
   display: inline-block;
-  color: yellow;
+  color: black;
   transition: ease-out .2s;
 }
 
 nav ul li a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
   transform: rotate(5deg);
 }
