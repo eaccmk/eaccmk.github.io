@@ -1,7 +1,8 @@
 # ignoring files.
-.npmignore
+
 3rdpartylicenses.txt
-node_modules/
-package-lock.json
 old_*
+
 accessibility_check/
+
+.vscode/
