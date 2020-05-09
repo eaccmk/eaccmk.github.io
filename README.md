@@ -11,8 +11,8 @@
 - JS
 ```
 
-## Running end-to-end tests
-
+## LICENSE
+You are free to reuse this, here is the copy of [LICENSE (MIT)](LICENSE) .
 
 ...handcrafted with :heart:
 
