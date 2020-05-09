@@ -58,13 +58,17 @@ section{
   color: white;
 }
 
+#About2{
+  background-color: black;
+  color: white;
+}
+
 #About p, #Skills p{
   padding: 0 120px;
   text-align: center;
 }
 
 #Skills{
-  padding: 25px 25px 25px 25px;
   background-color: white;
   color: black;
 }
