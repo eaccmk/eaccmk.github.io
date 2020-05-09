@@ -2,12 +2,12 @@
     $(document).ready(function()
     {
         // Scroll the whole document
-        $('#menu').localScroll({
+        $('#main').localScroll({
            target:'body'
         });
 
         // Scroll the content inside the #scroll-container div
-        $('#menu').localScroll({
+        $('#main').localScroll({
            target:'#About'
         });
 
