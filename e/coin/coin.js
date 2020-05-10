@@ -1,3 +1,4 @@
+window.onload=function(){
 var toggler = false;
 var degflag = false;
 var enddegflag = false;
@@ -55,3 +56,4 @@ myimg.addEventListener("transitionend", function () {
     }
   }
 }, false);
+}
