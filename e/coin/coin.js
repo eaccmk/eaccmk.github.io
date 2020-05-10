@@ -25,9 +25,13 @@ myimg.addEventListener("click", function() {
 
 myimg.addEventListener("transitionend", function () {
   if (counter < randNumber) {
+    console.log("---- counter  --- ", counter);
+    console.log("---- randNumber --- ", randNumber);
+    
     toggler = (toggler) ? false : true;
     if (toggler) {
       myimg.src = (myimg.src == quheads) ? qutails : quheads;
+      console.log("---- myimg.src --- ", myimg.src);
       myimg.style.transform = "rotateY(0deg)";
       degflag = false;
     }
