@@ -42,6 +42,8 @@ html, body{
 }
 
 section{
+  width: 100vw;
+  height: 95vh;
   position: relative;
   margin: 0 -999rem;
   padding: 5.25rem 999rem;
@@ -54,11 +56,6 @@ section{
 }
 
 #About{
-  background-color: black;
-  color: white;
-}
-
-#About2{
   background-color: black;
   color: white;
 }
@@ -107,13 +104,13 @@ nav ul li {
 nav ul li a {
   margin-right: 25px;
   display: inline-block;
-  color: black;
+  color: white;
   transition: ease-out .2s;
 }
 
 nav ul li a:hover {
   text-decoration: none;
-  color: black;
+  color: white;
   transform: rotate(5deg);
 }
 
