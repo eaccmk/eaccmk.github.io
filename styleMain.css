@@ -43,16 +43,15 @@ html, body{
 
 section{
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
   position: relative;
-  margin: 0 -999rem;
-  padding: 5.25rem 999rem;
   text-align: center;
 }
 
 #welcomeSection{
   background-color:black ;
   color: white;
+  text-align: center;
 }
 
 #About{
