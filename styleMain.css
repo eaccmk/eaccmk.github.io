@@ -44,7 +44,7 @@ html, body{
 section{
   width: 100vw;
   height: 90vh;
-  /*margin: 0 -999rem;*/
+  margin: 0 -999rem;
   padding: 5.25rem 999rem;
   position: relative;
   text-align: center;
@@ -115,6 +115,10 @@ nav ul li a:hover {
   transform: rotate(5deg);
 }
 
+footer {
+  width: 100vw;
+  height: 10vh;
+  }
 /* https://www.w3schools.com/w3css/3/w3.css */
 
 .w3-container{padding:0.01em 16px}
