@@ -1,0 +1,24 @@
+html, body{
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+section{
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+  }
+
+
+.weatherwidget-io {
+ background-color:black;
+ margin-left:-50px;
+ margin-top:-50px;
+
+}
