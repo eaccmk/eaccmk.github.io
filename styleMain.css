@@ -44,13 +44,13 @@ html, body{
 section{
   width: 100vw;
   height: 90vh;
-  margin: 0 -999rem;
-  padding: 5.25rem 999rem;
   position: relative;
   text-align: center;
 }
 
 #welcomeSection{
+  margin: 0 -999rem;
+  padding: 5.25rem 999rem;
   background-color:black ;
   color: white;
   text-align: center;
