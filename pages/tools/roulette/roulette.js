@@ -14,7 +14,7 @@ var names = new Array(
     "Chelsea",
 );
 
-$("#pick").on("click", getRandomName);
+//$("#pick").on("click", getRandomName);
 
 var doneNames = new Array()
 
@@ -23,7 +23,7 @@ function getRandomInt(max) {
 }
 
 function getRandomName(){
-  //console.log("clicked!");
+console.log("clicked!");
   
   
   var namesLength = names.length;

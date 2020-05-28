@@ -30,16 +30,22 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 html, body{
-  overflow: auto;
+/*  overflow: auto;
   overflow-x: hidden;
+  /*  color: black;*/
   height: 100%;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
-  font-weight: 100;
-
+  font-weight: 100;	
 }
 
+footer 
+.push {
+  background-color: white;
+  height: 10vh;
+}
+  
 .welcomePageHeading {
   color: red;
   padding: 120px 5px 5px 5px;
@@ -50,47 +56,24 @@ html, body{
 }
 
 section{
-  position: relative;
-  text-align: center;
-}
-
-#welcomeSection, #pageSection { 
   width: 100vw;
   height: 90vh;
-  background-color:black ;
+  position: relative;
+  text-align: center;
+  padding: 0px;
+  min-height: 100%;
+  margin: 0 auto 0px;
+}
+
+#welcomeSection, #pageSection, #WeatherSection, #RoulletSection{ 
+  background-color:black;
   color: white;
   text-align: center;
-}
-
-
-#About{
-  background-color: black;
-  color: white;
-}
-
-#About p, #Skills p{
-  padding: 0 120px;
-  text-align: center;
-}
-
-#Skills{
-  background-color: white;
-  color: black;
-}
-
-#Work{
-  background-color: black;
-  color: white;
 }
 
 #Contact{
   background-color: white;
   color: black;
-}
-
-#Credits{
-  background-color: black;
-  color: white;
 }
 
 img{
@@ -168,7 +151,8 @@ hr {
 .back2home {
 	background-color: black;
 	color: white;
-	margin: 10px 35%;
+	margin:50 auto;
+/*	margin: 10px 35%;*/
 	border: 0.5px solid white;
 	border-radius: 0px;
 	letter-spacing: 0.5px;
@@ -189,19 +173,6 @@ hr {
 	border-color: black;
 }
 
-footer {
-/*  width: 100vw;
-  height: 10vh;*/
-
-  background-color: white;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 50px;
-  width: 100%;
-  margin-bottom: 10px;
-  }
 /* https://www.w3schools.com/w3css/3/w3.css */
 
 .w3-container{padding:0.01em 16px}

@@ -1,24 +1,14 @@
-html, body{
-  overflow: auto;
-  overflow-x: hidden;
-  height: 100%;
-  margin: 0;
-  background-color: black;
+.weatherwidget-io {
+ background-color:white;
+ margin-left:10px;
+ margin-top:10px;
+ margin-top:10px;
+ margin-top:10px;
 }
 
-section{
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  bottom: 0;
-  left: 0;
-  }
-
-
-.weatherwidget-io {
- background-color:black;
- margin-left:-50px;
- margin-top:-50px;
-
+#weather{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
