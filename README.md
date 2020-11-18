@@ -13,6 +13,7 @@
 
 ## LICENSE
 You are free to reuse this, here is the copy of [LICENSE (MIT)](LICENSE) .
+Exception - Transport NSW, you can get your Trip Planner widget from https://opendata.transport.nsw.gov.au/
 
 ...handcrafted with :heart:
 
