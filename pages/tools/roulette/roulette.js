@@ -4,14 +4,12 @@ $("#pick").on("click", getRandomName);
 });
 
 var names = new Array(
-    "Names",
     "Alpha",
     "Beta",
     "Cat",
     "Dog",
-    "Gama",
     "eaccmk",
-    "Chelsea",
+    "Fun",
 );
 
 //$("#pick").on("click", getRandomName);
