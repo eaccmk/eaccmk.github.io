@@ -57,23 +57,24 @@ $.ajax({
     success: function (resp) {
 	if (resp.hasOwnProperty("error")){
 		console.log("Current side has no city error : "+ resp.error);
-		$('#cityName').html("hmm looks wet this side .. About <b>71 percent of the Earth's surface has water 🌊" );
+		$('#cityName').html("hmm looks it's wet this side .. <br> About <b>71 percent of the Earth's surface has water 🌊" );
 		$("#cityName").css("color", "blue");
-		$("#betweenCities").css("color", "black")
+		//$("#betweenCities").css("color", "black");
 	} else if (resp.address.hasOwnProperty("city")) {
 		$('#cityName').html("Glad that you are in: "+resp.address.city + " 📍");
 		$("#cityName").css("color", "white");
-		$("#betweenCities").css("color", "black")
+		//$("#betweenCities").css("color", "black");
 	} else {
 		$('#cityName').html(" 📍 Glad that you are in: "+ resp.display_name + "  (Country Name) : <b> " + resp.address.country  );
 		$("#cityName").css("color", "white");
-		$("#betweenCities").css("color", "black")
+		//$("#betweenCities").css("color", "black");
 	}	 
 	},
     error: function(e) {
         	alert('We are facing, error while fetching your current address : '+e);
 		$("#cityName").css("color", "red");
 		$('#otherCityName').html(" error while fetching current address ❗");
+		$("#betweenCities").css("color", "black");
 	}
 	});
 }
@@ -88,14 +89,14 @@ $.ajax({
 
 	if (resp.hasOwnProperty("error")){
 		console.log("Other side has no city error : "+ resp.error)
-		$('#otherCityName').html("hmm looks wet that side .. About <b>71 percent of the Earth's surface has water 🌊 " );
+		$('#otherCityName').html("hmm looks it's wet that side .. <br> About <b>71 percent of the Earth's surface has water 🌊 " );
 		$("#otherCityName").css("color", "blue");
-		$("#betweenCities").css("color", "black")
+		$("#betweenCities").css("color", "black");
 	
 	} else if (resp.address.hasOwnProperty("city")) {
 		$('#otherCityName').html(" 📍 So other side of the Place is: "+resp.address.city + " 📍");
 		$("#otherCityName").css("color", "white");
-		$("#betweenCities").css("color", "black")
+		$("#betweenCities").css("color", "black");
 	} else {
 		$('#otherCityName').html(" 📍 So other side of the Place is: "+ resp.display_name + "  (Country Name) : <b> " + resp.address.country);
 		$("#otherCityName").css("color", "white");
@@ -108,6 +109,7 @@ $.ajax({
         	console.error('We are facing, error while fetching your current address : '+ e);
 		$('#otherCityName').html(" error while fetching opposit address ❗");
 		$("#otherCityName").css("color", "red");
+		$("#betweenCities").css("color", "black");
 	}
 	});
 
